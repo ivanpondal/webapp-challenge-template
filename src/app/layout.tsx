@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import MasterDetailLayout from "@/components/ui/master-detail-layout";
+import { SpaceLaunchItem } from "@/components/space-launch/SpaceLaunchItem";
+import { SpaceLaunchList } from "@/components/space-launch/SpaceLaunchlist";
 
 export const metadata: Metadata = {
   title: "Martian Cronicles",
@@ -14,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {children}
+        <MasterDetailLayout master={<SpaceLaunchList />}>{children}</MasterDetailLayout>
       </body>
     </html>
   );
